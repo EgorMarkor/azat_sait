@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'socseti/vars.css' %}">
+  <link rel="stylesheet" href="{% static 'socseti/style.css' %}">
+  
+  
+  <style>
+  html {
+    font-size: 0.52vw;
+  }
+
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'ui/ui.css' %}">
+  <script defer src="{% static 'ui/ui.js' %}"></script>
+</head>
+<body class="ui-body" data-page="socseti">
+  <div class="frame-2131330364">
+    <div class="frame-2131330364__rectangle-119"></div>
+    <div class="frame-2131330364__ellipse-2"></div>
+    <img class="frame-2131330364__vector" src="{% static 'socseti/vector0.svg' %}" />
+    <div class="frame-2131330364__div">Наши соц сети и не только</div>
+    <div class="frame-2131330364__rectangle-191"></div>
+    <div class="frame-2131330364__rectangle-193"></div>
+    <div class="frame-2131330364__rectangle-192"></div>
+    <div class="frame-2131330364__group-704">
+      <div class="frame-2131330364__group-571">
+        <div class="frame-2131330364__rectangle-105"></div>
+        <div class="frame-2131330364__div2">Телеграмм канал</div>
+        <div class="frame-2131330364__telegram">Telegram</div>
+      </div>
+    </div>
+    <div class="frame-2131330364__rectangle-1922"></div>
+    <div class="frame-2131330364__group-7042">
+      <div class="frame-2131330364__group-5712">
+        <div class="frame-2131330364__rectangle-1052"></div>
+        <div class="frame-2131330364__div3">Поддержка в тг</div>
+        <div class="frame-2131330364__telegram2">Telegram</div>
+      </div>
+    </div>
+    <div class="frame-2131330364__rectangle-1923"></div>
+    <div class="frame-2131330364__group-7043">
+      <div class="frame-2131330364__group-5713">
+        <div class="frame-2131330364__rectangle-1053"></div>
+        <div class="frame-2131330364__div4">Группа в Вконтакте</div>
+        <div class="frame-2131330364__vk">VK</div>
+      </div>
+    </div>
+    <div class="frame-2131330364__rectangle-1924"></div>
+    <div class="frame-2131330364__group-7044">
+      <div class="frame-2131330364__group-5714">
+        <div class="frame-2131330364__rectangle-1054"></div>
+        <div class="frame-2131330364__div5">Другие вопросы?</div>
+        <div class="frame-2131330364__div6">Задай их напрямую!</div>
+      </div>
+    </div>
+    <div class="frame-2131330364__group-5715">
+      <div class="frame-2131330364__rectangle-1055"></div>
+      <div class="frame-2131330364__div7">Инстаграмм</div>
+      <div class="frame-2131330364__instagram">Instagram</div>
+    </div>
+    <div class="frame-2131330364__meta">
+      продукт Meta, признанной экстремистской организацией в РФ
+    </div>
+    <img class="frame-2131330364__vector2" src="{% static 'socseti/vector1.svg' %}" />
+    <img class="frame-2131330364__vector3" src="{% static 'socseti/vector2.svg' %}" />
+    <img class="frame-2131330364__logo-1" src="{% static 'socseti/logo-10.png' %}" />
+    <img class="frame-2131330364__vector4" src="{% static 'socseti/vector3.svg' %}" />
+    <img class="frame-2131330364__clip-path-group" src="{% static 'socseti/clip-path-group0.svg' %}" />
+    <div class="frame-2131330364__ellipse-34"></div>
+    <img class="frame-2131330364__vector5" src="{% static 'socseti/vector4.svg' %}" />
+    <div class="frame-2131330364__rectangle-104"></div>
+    <img class="frame-2131330364__vector6" src="{% static 'socseti/vector5.svg' %}" />
+    <a class="frame-2131330364__div8 ui-link ui-nav-link" href="{% url 'home' %}">Главная</a>
+    <a class="frame-2131330364__div9 ui-link ui-nav-link" href="{% url 'socseti' %}">Соц.сети</a>
+    <a class="frame-2131330364__div10 ui-link ui-nav-link" href="{% url 'catalog' %}">Все товары</a>
+    <div class="frame-2131330364__ellipse-22"></div>
+    <div class="frame-2131330364__group-602">
+      <div class="frame-2131330364__group-541">
+        <div class="frame-2131330364___3 js-cart-count">0</div>
+        <div class="frame-2131330364__group-698">
+          <div class="frame-2131330364__rectangle-101"></div>
+          <div class="frame-2131330364__bag">BAG</div>
+          <div class="frame-2131330364__div11">(</div>
+          <div class="frame-2131330364__div12">(</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <div class="ui-floating-panel">
+      <button class="ui-button ui-toggle js-animations-toggle" type="button" aria-pressed="false">
+        <span>Анимации</span>
+        <span class="ui-toggle__switch"></span>
+      </button>
+      <a class="ui-button ui-link" href="{% url 'catalog' %}">Каталог</a>
+      <a class="ui-button ui-link" href="{% url 'socseti' %}">Соц. сети</a>
+    </div>
+    <button class="ui-cart-button js-cart-toggle" type="button">
+      Корзина
+      <span class="ui-cart-count js-cart-count">0</span>
+    </button>
+    <aside class="ui-cart-drawer" aria-label="Корзина">
+      <div class="ui-cart-header">
+        <h2>Корзина</h2>
+        <button class="ui-button js-cart-toggle" type="button">Закрыть</button>
+      </div>
+      <div class="ui-cart-items js-cart-items"></div>
+      <div class="ui-cart-footer">
+        <div class="ui-cart-total">Итого: <span class="js-cart-total">0</span> ₽</div>
+        <a class="ui-button ui-checkout-button" href="{% url 'oforms' %}">Оформить заказ</a>
+      </div>
+    </aside>
+
+</body>
+</html>

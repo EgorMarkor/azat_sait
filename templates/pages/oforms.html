@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'oforms/vars.css' %}">
+  <link rel="stylesheet" href="{% static 'oforms/style.css' %}">
+  
+  
+  <style>
+  html {
+    font-size: 0.52vw;
+  }
+
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'ui/ui.css' %}">
+  <script defer src="{% static 'ui/ui.js' %}"></script>
+</head>
+<body class="ui-body" data-page="oforms">
+  <div class="frame-2131330366">
+    <div class="frame-2131330366__group-842">
+      <div class="frame-2131330366__rectangle-119"></div>
+    </div>
+    <div class="frame-2131330366__group-847">
+      <div class="frame-2131330366__rectangle-104"></div>
+      <div class="frame-2131330366__rectangle-107"></div>
+      <div class="frame-2131330366__rectangle-108"></div>
+      <img class="frame-2131330366__vector" src="{% static 'oforms/vector0.svg' %}" />
+      <a class="frame-2131330366__div ui-link ui-nav-link" href="{% url 'home' %}">Главная</a>
+      <a class="frame-2131330366__div2 ui-link ui-nav-link" href="{% url 'catalog' %}">Коллекции</a>
+      <a class="frame-2131330366__div3 ui-link ui-nav-link" href="{% url 'socseti' %}">Соц. сети</a>
+      <a class="frame-2131330366__div4 ui-link ui-nav-link" href="{% url 'catalog' %}">Все товары</a>
+      <div class="frame-2131330366__ellipse-2"></div>
+      <div class="frame-2131330366__group-602">
+        <div class="frame-2131330366__group-541">
+          <div class="frame-2131330366___3 js-cart-count">0</div>
+          <div class="frame-2131330366__group-698">
+            <div class="frame-2131330366__rectangle-101"></div>
+            <div class="frame-2131330366__bag">BAG</div>
+            <div class="frame-2131330366__div5">(</div>
+            <div class="frame-2131330366__div6">(</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-2131330366__group-855">
+      <div class="frame-2131330366__rectangle-106"></div>
+      <div class="frame-2131330366__div7">Контактная информация</div>
+    </div>
+    <div class="frame-2131330366__group-606">
+      <div class="frame-2131330366__rectangle-103"></div>
+    </div>
+    <div class="frame-2131330366__group-696">
+      <div class="frame-2131330366__group-697">
+        <div class="frame-2131330366__div8">Клиентам</div>
+        <a class="frame-2131330366__div9 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Договор оферты
+          <br />
+        </a>
+        <a class="frame-2131330366__div10 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Конфидециальность
+          <br />
+        </a>
+        <a class="frame-2131330366__div11 ui-link ui-nav-link" href="{% url 'socseti' %}">Социальные сети</a>
+        <div class="frame-2131330366__chained-project-2025">
+          CHAINED PROJECT ®2025
+        </div>
+      </div>
+    </div>
+    <div class="frame-2131330366__div12">Фамилия*</div>
+    <div class="frame-2131330366__rectangle-309"></div>
+    <div class="frame-2131330366__div13">Имя*</div>
+    <div class="frame-2131330366__rectangle-310"></div>
+    <div class="frame-2131330366__div14">Отчество</div>
+    <div class="frame-2131330366__div15">Ваша фамилия</div>
+    <div class="frame-2131330366__div16">Ваше имя</div>
+    <div class="frame-2131330366__rectangle-311"></div>
+    <div class="frame-2131330366__e-mail">E-Mail*</div>
+    <div class="frame-2131330366__div17">Ваша почта</div>
+    <div class="frame-2131330366__rectangle-312"></div>
+    <div class="frame-2131330366__rectangle-313"></div>
+    <div class="frame-2131330366__div18">Телефон</div>
+    <div class="frame-2131330366___7">+7</div>
+    <div class="frame-2131330366___960-000-00-00">960 000 00 00</div>
+    <img class="frame-2131330366__div19" src="{% static 'oforms/div18.svg' %}" />
+    <div class="frame-2131330366__group-931">
+      <div class="frame-2131330366__rectangle-1072"></div>
+      <div class="frame-2131330366__rectangle-238"></div>
+      <div class="frame-2131330366__rectangle-239"></div>
+      <div class="frame-2131330366__telegram">Telegram</div>
+      <div class="frame-2131330366__div20">Комментарий к заказу</div>
+      <div class="frame-2131330366__div21">@</div>
+    </div>
+    <div class="frame-2131330366__div22">Хочу чего то</div>
+    <div class="frame-2131330366__group-867">
+      <div class="frame-2131330366__rectangle-2392"></div>
+      <div class="frame-2131330366__div23">Продолжить</div>
+    </div>
+    <div class="frame-2131330366__group-935">
+      <div class="frame-2131330366__rectangle-123"></div>
+    </div>
+    <div class="frame-2131330366__group-1007">
+      <div class="frame-2131330366__group-1005">
+        <div class="frame-2131330366___1">1</div>
+        <div class="frame-2131330366__div24">ШТ</div>
+      </div>
+      <div class="frame-2131330366__group-1006">
+        <div class="frame-2131330366__hoodie-chained-black">
+          Hoodie Chained Black
+        </div>
+        <div class="frame-2131330366__l">( L )</div>
+        <div class="frame-2131330366___2600-rub">2600 RUB</div>
+      </div>
+    </div>
+    <div class="frame-2131330366__group-935">
+      <div class="frame-2131330366__rectangle-1232"></div>
+    </div>
+    <div class="frame-2131330366__group-1007">
+      <div class="frame-2131330366__group-1005">
+        <div class="frame-2131330366___12">1</div>
+        <div class="frame-2131330366__div25">ШТ</div>
+      </div>
+      <div class="frame-2131330366__group-1006">
+        <div class="frame-2131330366__hoodie-chained-black2">
+          Hoodie Chained Black
+        </div>
+        <div class="frame-2131330366__l2">( L )</div>
+        <div class="frame-2131330366___2600-rub2">2600 RUB</div>
+      </div>
+    </div>
+    <div class="frame-2131330366__group-935">
+      <div class="frame-2131330366__rectangle-1233"></div>
+    </div>
+    <div class="frame-2131330366__group-1007">
+      <div class="frame-2131330366__group-1005">
+        <div class="frame-2131330366___13">1</div>
+        <div class="frame-2131330366__div26">ШТ</div>
+      </div>
+      <div class="frame-2131330366__group-1006">
+        <div class="frame-2131330366__hoodie-chained-black3">
+          Hoodie Chained Black
+        </div>
+        <div class="frame-2131330366__l3">( L )</div>
+        <div class="frame-2131330366___2600-rub3">2600 RUB</div>
+      </div>
+    </div>
+    <img class="frame-2131330366__vector-95" src="{% static 'oforms/vector-950.svg' %}" />
+    <div class="frame-2131330366__div27">Итого:</div>
+    <div class="frame-2131330366___5200-rub">5200 RUB</div>
+    <div class="frame-2131330366__div28">Посмотреть все</div>
+  </div>
+  
+
+    <div class="ui-floating-panel">
+      <button class="ui-button ui-toggle js-animations-toggle" type="button" aria-pressed="false">
+        <span>Анимации</span>
+        <span class="ui-toggle__switch"></span>
+      </button>
+      <a class="ui-button ui-link" href="{% url 'catalog' %}">Каталог</a>
+      <a class="ui-button ui-link" href="{% url 'socseti' %}">Соц. сети</a>
+    </div>
+    <button class="ui-cart-button js-cart-toggle" type="button">
+      Корзина
+      <span class="ui-cart-count js-cart-count">0</span>
+    </button>
+    <aside class="ui-cart-drawer" aria-label="Корзина">
+      <div class="ui-cart-header">
+        <h2>Корзина</h2>
+        <button class="ui-button js-cart-toggle" type="button">Закрыть</button>
+      </div>
+      <div class="ui-cart-items js-cart-items"></div>
+      <div class="ui-cart-footer">
+        <div class="ui-cart-total">Итого: <span class="js-cart-total">0</span> ₽</div>
+        <a class="ui-button ui-checkout-button" href="{% url 'oforms' %}">Оформить заказ</a>
+      </div>
+    </aside>
+
+</body>
+</html>

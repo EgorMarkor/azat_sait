@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'catalog/vars.css' %}">
+  <link rel="stylesheet" href="{% static 'catalog/style.css' %}">
+  
+  
+  <style>
+  html {
+    font-size: 0.52vw;
+  }
+
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'ui/ui.css' %}">
+  <script defer src="{% static 'ui/ui.js' %}"></script>
+</head>
+<body class="ui-body" data-page="catalog">
+  <div class="frame-2131330363">
+    <div class="frame-2131330363__group-606">
+      <div class="frame-2131330363__rectangle-103"></div>
+    </div>
+    <div class="frame-2131330363__group-696">
+      <div class="frame-2131330363__group-697">
+        <div class="frame-2131330363__div">Клиентам</div>
+        <a class="frame-2131330363__div2 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Договор оферты
+          <br />
+        </a>
+        <a class="frame-2131330363__div3 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Конфидециальность
+          <br />
+        </a>
+        <a class="frame-2131330363__div4 ui-link ui-nav-link" href="{% url 'socseti' %}">Социальные сети</a>
+        <div class="frame-2131330363__chained-project-2025">
+          CHAINED PROJECT ®2025
+        </div>
+      </div>
+    </div>
+    <div class="frame-2131330363__rectangle-119"></div>
+    <div class="frame-2131330363__group-29">
+      <div class="frame-2131330363__group-546">
+        <div class="frame-2131330363__rectangle-1032"></div>
+        <div class="frame-2131330363__div5">Предмет</div>
+        <div class="frame-2131330363__rectangle-104"></div>
+        <div class="frame-2131330363__div6">Худи и свитера</div>
+        <div class="frame-2131330363__div7">Футблоки и Лонгсливы</div>
+        <div class="frame-2131330363__div8">Аксессуары</div>
+        <div class="frame-2131330363__rectangle-102"></div>
+        <div class="frame-2131330363__div9">Модели</div>
+      </div>
+      <div class="frame-2131330363__group-547">
+        <div class="frame-2131330363__rectangle-1022"></div>
+        <div class="frame-2131330363__div10">Все товары</div>
+      </div>
+    </div>
+    <div class="frame-2131330363__ellipse-2"></div>
+    <div class="frame-2131330363__rectangle-73 ui-card" data-id="stroy-canvas-jacket" data-product="STROY Canvas Jacket" data-price="6500"></div>
+    <div class="frame-2131330363__rectangle-228"></div>
+    <div class="frame-2131330363__group-3">
+      <div class="frame-2131330363___6500">6500</div>
+      <div class="frame-2131330363__rub">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-732 ui-card" data-id="hoodie-logo-chained" data-product="Hoodie Logo Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-32">
+      <div class="frame-2131330363__stroy-anvas-jacket">
+        STROY
+        <br />
+        сanvas jacket
+        <br />
+        <br />
+      </div>
+      <div class="frame-2131330363__hoodie-logo-chained">
+        Hoodie Logo
+        <br />
+        Chained
+      </div>
+      <div class="frame-2131330363___65002">6500</div>
+      <div class="frame-2131330363__rub2">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-733 ui-card" data-id="hoodie-chained-1" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained">Hoodie Chained</div>
+      <div class="frame-2131330363___65003">6500</div>
+      <div class="frame-2131330363__rub3">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-734 ui-card" data-id="hoodie-chained-2" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained2">Hoodie Chained</div>
+      <div class="frame-2131330363___65004">6500</div>
+      <div class="frame-2131330363__rub4">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-735 ui-card" data-id="hoodie-chained-3" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained3">Hoodie Chained</div>
+      <div class="frame-2131330363___65005">6500</div>
+      <div class="frame-2131330363__rub5">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-736 ui-card" data-id="hoodie-chained-4" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained4">Hoodie Chained</div>
+      <div class="frame-2131330363___65006">6500</div>
+      <div class="frame-2131330363__rub6">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-737 ui-card" data-id="hoodie-chained-5" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained5">Hoodie Chained</div>
+      <div class="frame-2131330363___65007">6500</div>
+      <div class="frame-2131330363__rub7">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-738 ui-card" data-id="hoodie-chained-6" data-product="Hoodie Chained" data-price="6500"></div>
+    <div class="frame-2131330363__group-33">
+      <div class="frame-2131330363__hoodie-chained6">Hoodie Chained</div>
+      <div class="frame-2131330363___65008">6500</div>
+      <div class="frame-2131330363__rub8">RUB</div>
+    </div>
+    <div class="frame-2131330363__rectangle-1042"></div>
+    <img class="frame-2131330363__vector" src="{% static 'catalog/vector0.svg' %}" />
+    <a class="frame-2131330363__div11 ui-link ui-nav-link" href="{% url 'home' %}">Главная</a>
+    <a class="frame-2131330363__div12 ui-link ui-nav-link" href="{% url 'socseti' %}">Соц.сети</a>
+    <a class="frame-2131330363__div13 ui-link ui-nav-link" href="{% url 'catalog' %}">Все товары</a>
+    <div class="frame-2131330363__ellipse-22"></div>
+    <div class="frame-2131330363__group-602">
+      <div class="frame-2131330363__group-541">
+        <div class="frame-2131330363___3 js-cart-count">0</div>
+        <div class="frame-2131330363__group-698">
+          <div class="frame-2131330363__rectangle-101"></div>
+          <div class="frame-2131330363__bag">BAG</div>
+          <div class="frame-2131330363__div14">(</div>
+          <div class="frame-2131330363__div15">(</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <div class="ui-floating-panel">
+      <button class="ui-button ui-toggle js-animations-toggle" type="button" aria-pressed="false">
+        <span>Анимации</span>
+        <span class="ui-toggle__switch"></span>
+      </button>
+      <a class="ui-button ui-link" href="{% url 'catalog' %}">Каталог</a>
+      <a class="ui-button ui-link" href="{% url 'socseti' %}">Соц. сети</a>
+    </div>
+    <button class="ui-cart-button js-cart-toggle" type="button">
+      Корзина
+      <span class="ui-cart-count js-cart-count">0</span>
+    </button>
+    <aside class="ui-cart-drawer" aria-label="Корзина">
+      <div class="ui-cart-header">
+        <h2>Корзина</h2>
+        <button class="ui-button js-cart-toggle" type="button">Закрыть</button>
+      </div>
+      <div class="ui-cart-items js-cart-items"></div>
+      <div class="ui-cart-footer">
+        <div class="ui-cart-total">Итого: <span class="js-cart-total">0</span> ₽</div>
+        <a class="ui-button ui-checkout-button" href="{% url 'oforms' %}">Оформить заказ</a>
+      </div>
+    </aside>
+
+</body>
+</html>
