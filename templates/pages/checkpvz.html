@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'checkpvz/vars.css' %}">
+  <link rel="stylesheet" href="{% static 'checkpvz/style.css' %}">
+  
+  
+  <style>
+  html {
+    font-size: 0.52vw;
+  }
+
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'ui/ui.css' %}">
+  <script defer src="{% static 'ui/ui.js' %}"></script>
+</head>
+<body class="ui-body" data-page="checkpvz">
+  <div class="frame-2131330367">
+    <div class="frame-2131330367__group-842">
+      <img class="frame-2131330367__rectangle-119" src="{% static 'checkpvz/rectangle-1190.png' %}" />
+      <div class="frame-2131330367__rectangle-120"></div>
+    </div>
+    <div class="frame-2131330367__group-847">
+      <div class="frame-2131330367__rectangle-104"></div>
+      <div class="frame-2131330367__rectangle-107"></div>
+      <img class="frame-2131330367__vector" src="{% static 'checkpvz/vector0.svg' %}" />
+      <a class="frame-2131330367__div ui-link ui-nav-link" href="{% url 'home' %}">Главная</a>
+      <a class="frame-2131330367__div2 ui-link ui-nav-link" href="{% url 'catalog' %}">Коллекции</a>
+      <a class="frame-2131330367__div3 ui-link ui-nav-link" href="{% url 'socseti' %}">Соц. сети</a>
+      <a class="frame-2131330367__div4 ui-link ui-nav-link" href="{% url 'catalog' %}">Все товары</a>
+      <div class="frame-2131330367__ellipse-2"></div>
+      <div class="frame-2131330367__group-602">
+        <div class="frame-2131330367__group-541">
+          <div class="frame-2131330367___3 js-cart-count">0</div>
+          <div class="frame-2131330367__group-698">
+            <div class="frame-2131330367__rectangle-101"></div>
+            <div class="frame-2131330367__bag">BAG</div>
+            <div class="frame-2131330367__div5">(</div>
+            <div class="frame-2131330367__div6">(</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-2131330367__group-855">
+      <div class="frame-2131330367__div7">Способ доставки</div>
+    </div>
+    <div class="frame-2131330367__group-606">
+      <div class="frame-2131330367__rectangle-103"></div>
+    </div>
+    <div class="frame-2131330367__group-696">
+      <div class="frame-2131330367__group-697">
+        <div class="frame-2131330367__div8">Клиентам</div>
+        <a class="frame-2131330367__div9 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Договор оферты
+          <br />
+        </a>
+        <a class="frame-2131330367__div10 ui-link ui-nav-link" href="{% url 'offerts' %}">
+          Конфидециальность
+          <br />
+        </a>
+        <a class="frame-2131330367__div11 ui-link ui-nav-link" href="{% url 'socseti' %}">Социальные сети</a>
+        <div class="frame-2131330367__chained-project-2025">
+          CHAINED PROJECT ®2025
+        </div>
+      </div>
+    </div>
+    <div class="frame-2131330367__rectangle-1072"></div>
+    <div class="frame-2131330367__rectangle-240"></div>
+    <div class="frame-2131330367__rectangle-241"></div>
+    <img class="frame-2131330367__vector2" src="{% static 'checkpvz/vector1.svg' %}" />
+    <div class="frame-2131330367__div12">Г.Москва</div>
+    <img class="frame-2131330367__div13" src="{% static 'checkpvz/div12.svg' %}" />
+    <div class="frame-2131330367__group-877">
+      <div class="frame-2131330367__div14">&gt;</div>
+    </div>
+    <div class="frame-2131330367__group-940">
+      <div class="frame-2131330367__group-8772">
+        <div class="frame-2131330367__rectangle-243"></div>
+        <div class="frame-2131330367___2-3">2-3 дня</div>
+        <div class="frame-2131330367___125009-1-2">
+          Пункт выдачи СДЭК: 125009, Россия, Москва,
+          <br />
+          Москва, Манежная площадь, 1 стр. 2
+        </div>
+        <div class="frame-2131330367___475-50-rub">475.50 RUB</div>
+        <div class="frame-2131330367__div15">&gt;</div>
+      </div>
+      <img class="frame-2131330367__group-876" src="{% static 'checkpvz/group-8760.svg' %}" />
+    </div>
+    <img class="frame-2131330367__vector3" src="{% static 'checkpvz/vector2.svg' %}" />
+    <div class="frame-2131330367__group-940">
+      <div class="frame-2131330367__group-8772">
+        <div class="frame-2131330367__rectangle-2432"></div>
+        <div class="frame-2131330367___2-32">2-3 дня</div>
+        <div class="frame-2131330367___125009-1-22">
+          Пункт выдачи СДЭК: 125009, Россия, Москва,
+          <br />
+          Москва, Манежная площадь, 1 стр. 2
+        </div>
+        <div class="frame-2131330367___475-50-rub2">475.50 RUB</div>
+        <div class="frame-2131330367__div16">&gt;</div>
+      </div>
+      <img class="frame-2131330367__group-8762" src="{% static 'checkpvz/group-8761.svg' %}" />
+    </div>
+    <img class="frame-2131330367__vector4" src="{% static 'checkpvz/vector3.svg' %}" />
+    <div class="frame-2131330367__group-940">
+      <div class="frame-2131330367__group-8772">
+        <div class="frame-2131330367__rectangle-2433"></div>
+        <div class="frame-2131330367___2-33">2-3 дня</div>
+        <div class="frame-2131330367___125009-1-23">
+          Пункт выдачи СДЭК: 125009, Россия, Москва,
+          <br />
+          Москва, Манежная площадь, 1 стр. 2
+        </div>
+        <div class="frame-2131330367___475-50-rub3">475.50 RUB</div>
+        <div class="frame-2131330367__div17">&gt;</div>
+      </div>
+      <img class="frame-2131330367__group-8763" src="{% static 'checkpvz/group-8762.svg' %}" />
+    </div>
+    <img class="frame-2131330367__vector5" src="{% static 'checkpvz/vector4.svg' %}" />
+    <div class="frame-2131330367__group-9402">
+      <div class="frame-2131330367__group-8772">
+        <div class="frame-2131330367__rectangle-2434"></div>
+        <div class="frame-2131330367___2-34">2-3 дня</div>
+        <div class="frame-2131330367___125009-1-24">
+          Пункт выдачи СДЭК: 125009, Россия, Москва,
+          <br />
+          Москва, Манежная площадь, 1 стр. 2
+        </div>
+        <div class="frame-2131330367___475-50-rub4">475.50 RUB</div>
+        <div class="frame-2131330367__div18">&gt;</div>
+      </div>
+    </div>
+    <img class="frame-2131330367__vector6" src="{% static 'checkpvz/vector5.svg' %}" />
+    <div class="frame-2131330367__rectangle-106"></div>
+    <div class="frame-2131330367__rectangle-1073"></div>
+    <div class="frame-2131330367__div19">Доставка</div>
+    <div class="frame-2131330367__div20">Самовывоз</div>
+  </div>
+  
+
+    <div class="ui-floating-panel">
+      <button class="ui-button ui-toggle js-animations-toggle" type="button" aria-pressed="false">
+        <span>Анимации</span>
+        <span class="ui-toggle__switch"></span>
+      </button>
+      <a class="ui-button ui-link" href="{% url 'catalog' %}">Каталог</a>
+      <a class="ui-button ui-link" href="{% url 'socseti' %}">Соц. сети</a>
+    </div>
+    <button class="ui-cart-button js-cart-toggle" type="button">
+      Корзина
+      <span class="ui-cart-count js-cart-count">0</span>
+    </button>
+    <aside class="ui-cart-drawer" aria-label="Корзина">
+      <div class="ui-cart-header">
+        <h2>Корзина</h2>
+        <button class="ui-button js-cart-toggle" type="button">Закрыть</button>
+      </div>
+      <div class="ui-cart-items js-cart-items"></div>
+      <div class="ui-cart-footer">
+        <div class="ui-cart-total">Итого: <span class="js-cart-total">0</span> ₽</div>
+        <a class="ui-button ui-checkout-button" href="{% url 'oforms' %}">Оформить заказ</a>
+      </div>
+    </aside>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+:root {
+  --ui-bg: rgba(17, 17, 17, 0.92);
+  --ui-panel: rgba(22, 22, 22, 0.92);
+  --ui-accent: #f6f6f6;
+  --ui-accent-soft: rgba(255, 255, 255, 0.65);
+  --ui-shadow: 0 1.6rem 3.6rem rgba(0, 0, 0, 0.45);
+  --ui-radius: 1.6rem;
+  --ui-transition: 200ms ease;
+}
+
+.ui-body {
+  color: #ffffff;
+}
+
+.ui-body *:focus-visible {
+  outline: 0.2rem solid rgba(255, 255, 255, 0.6);
+  outline-offset: 0.4rem;
+}
+
+.ui-floating-panel {
+  position: fixed;
+  top: 2.4rem;
+  right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 80;
+}
+
+.ui-button {
+  padding: 1.2rem 1.8rem;
+  border-radius: 999px;
+  background: var(--ui-panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: var(--ui-shadow);
+  cursor: pointer;
+  transition: transform var(--ui-transition), box-shadow var(--ui-transition), background var(--ui-transition);
+}
+
+.ui-button:hover {
+  transform: translateY(-0.2rem) scale(1.01);
+  box-shadow: 0 2.2rem 4rem rgba(0, 0, 0, 0.5);
+  background: rgba(30, 30, 30, 0.95);
+}
+
+.ui-toggle {
+  width: 18rem;
+  justify-content: space-between;
+}
+
+.ui-toggle__switch {
+  width: 3.4rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  display: inline-block;
+  transition: background var(--ui-transition);
+}
+
+.ui-toggle__switch::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  transition: transform var(--ui-transition);
+}
+
+.ui-toggle.is-active .ui-toggle__switch {
+  background: rgba(80, 230, 150, 0.6);
+}
+
+.ui-toggle.is-active .ui-toggle__switch::after {
+  transform: translateX(1.4rem);
+}
+
+.ui-cart-button {
+  position: fixed;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 2.2rem;
+  border-radius: 999px;
+  background: rgba(25, 25, 25, 0.96);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  box-shadow: var(--ui-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: transform var(--ui-transition), box-shadow var(--ui-transition);
+}
+
+.ui-cart-button:hover {
+  transform: translateY(-0.2rem);
+}
+
+.ui-cart-count {
+  min-width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ui-cart-drawer {
+  position: fixed;
+  right: -44rem;
+  top: 2.4rem;
+  width: 38rem;
+  height: calc(100vh - 4.8rem);
+  background: rgba(16, 16, 16, 0.96);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 95;
+  transition: right 240ms ease;
+}
+
+.ui-body.cart-open .ui-cart-drawer {
+  right: 2.4rem;
+}
+
+.ui-cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ui-cart-items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ui-cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem 1.2rem;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ui-cart-item-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+.ui-cart-item-meta {
+  font-size: 1.2rem;
+  color: var(--ui-accent-soft);
+}
+
+.ui-cart-item button {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.ui-cart-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ui-checkout-button {
+  justify-content: center;
+}
+
+.ui-card {
+  cursor: pointer;
+  transition: transform var(--ui-transition), box-shadow var(--ui-transition), border-color var(--ui-transition);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  border: 0.1rem solid transparent;
+}
+
+.ui-card::after {
+  content: "Добавить в корзину";
+  position: absolute;
+  inset: auto 1.6rem 1.6rem 1.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(0.8rem);
+  transition: opacity var(--ui-transition), transform var(--ui-transition);
+  text-align: center;
+}
+
+.ui-card:hover {
+  transform: translateY(-0.6rem) scale(1.01);
+  box-shadow: 0 1.6rem 3rem rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.ui-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ui-link {
+  color: inherit;
+}
+
+.ui-nav-link {
+  cursor: pointer;
+  transition: color var(--ui-transition), transform var(--ui-transition);
+}
+
+.ui-nav-link:hover {
+  color: #ffffff;
+  transform: translateX(0.4rem);
+}
+
+.animations-off * {
+  transition: none !important;
+  animation: none !important;
+}
+
+@media (max-width: 900px) {
+  .ui-floating-panel {
+    right: 1.2rem;
+    top: 1.2rem;
+  }
+
+  .ui-cart-drawer {
+    width: 32rem;
+  }
+}
