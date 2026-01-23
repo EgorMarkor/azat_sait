@@ -89,6 +89,11 @@ const setupCart = () => {
 
   document.querySelectorAll("[data-product]").forEach((node) => {
     node.addEventListener("click", () => {
+      const link = node.getAttribute("data-link");
+      if (link) {
+        window.location.href = link;
+        return;
+      }
       const title = node.getAttribute("data-product");
       const price = Number(node.getAttribute("data-price"));
       if (!title || !price) return;

@@ -10,4 +10,5 @@ urlpatterns = [
     path("socseti/", views.socseti, name="socseti"),
     path("checkpvz/", views.checkpvz, name="checkpvz"),
     path("checkdanzak/", views.checkdanzak, name="checkdanzak"),
+    path("product/<slug:slug>/", views.product, name="product"),
 ]
