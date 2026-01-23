@@ -76,12 +76,15 @@
       <div class="product-card__info">
         <h1 class="product-card__title">{{ product.title }}</h1>
 
-        <div class="product-card__label">Размер*</div>
-        <div class="product-card__sizes">
-          <button class="product-card__size-btn" type="button">S</button>
-          <button class="product-card__size-btn is-active" type="button">M</button>
-          <button class="product-card__size-btn" type="button">L</button>
-          <button class="product-card__size-btn" type="button">XL</button>
+        <div class="catalog-switch product-card__size-switch" data-switch>
+          <div class="catalog-switch__label">Размер*</div>
+          <div class="catalog-switch__track" role="tablist" aria-label="Выбор размера">
+            <span class="catalog-switch__thumb" aria-hidden="true"></span>
+            <button class="catalog-switch__option" type="button">S</button>
+            <button class="catalog-switch__option is-active" type="button">M</button>
+            <button class="catalog-switch__option" type="button">L</button>
+            <button class="catalog-switch__option" type="button">XL</button>
+          </div>
         </div>
 
         <button
