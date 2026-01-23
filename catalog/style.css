@@ -110,14 +110,84 @@
   transform: rotate(-90deg) scale(1, 1);
 }
 .frame-2131330363__group-29 {
+  position: absolute;
+  left: 8.9rem;
+  top: 15.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
   width: 174.193rem;
-  height: 4.82rem;
-  position: static;
+  z-index: 2;
 }
-.frame-2131330363__group-546 {
-  width: 174.193rem;
+.catalog-switch {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.catalog-switch__label {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Manrope-Regular", sans-serif;
+  font-size: 2.2457290649414063rem;
+  line-height: 2.246rem;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  opacity: 0.4;
+  white-space: nowrap;
+}
+.catalog-switch__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem;
+  background: #161616;
+  border-radius: 19.825rem;
   height: 4.82rem;
-  position: static;
+}
+.catalog-switch__thumb {
+  position: absolute;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  left: 0.3rem;
+  width: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  transition: transform 0.3s ease, width 0.3s ease;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+.catalog-switch__option {
+  position: relative;
+  z-index: 1;
+  padding: 0 1.6rem;
+  font-family: "Manrope-Regular", sans-serif;
+  font-size: 2.2457290649414063rem;
+  line-height: 2.246rem;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.catalog-switch__option.is-active {
+  color: #0b0b0b;
+}
+.catalog-switch--subject .catalog-switch__track {
+  width: 88.798rem;
+}
+.catalog-switch--view .catalog-switch__track {
+  width: 26rem;
+  background: #000000;
+  border: 0.087rem solid #ffffff;
+}
+.catalog-switch--view .catalog-switch__option {
+  padding: 0 1.2rem;
+}
+.catalog-switch--view .catalog-switch__thumb {
+  background: #ffffff;
 }
 .frame-2131330363__rectangle-1032 {
   background: #161616;
