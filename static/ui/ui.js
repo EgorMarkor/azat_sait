@@ -124,7 +124,51 @@ const setupAnimationToggle = () => {
   });
 };
 
+const setupCatalogSwitches = () => {
+  const switches = document.querySelectorAll("[data-switch]");
+  if (!switches.length) return;
+
+  const updateThumb = (switchNode) => {
+    const thumb = switchNode.querySelector(".catalog-switch__thumb");
+    const active = switchNode.querySelector(".catalog-switch__option.is-active");
+    if (!thumb || !active) return;
+    const track = active.parentElement;
+    if (!track) return;
+    const trackRect = track.getBoundingClientRect();
+    const optionRect = active.getBoundingClientRect();
+    const offsetLeft = optionRect.left - trackRect.left;
+    thumb.style.width = `${optionRect.width}px`;
+    thumb.style.transform = `translateX(${offsetLeft}px)`;
+  };
+
+  switches.forEach((switchNode) => {
+    const options = Array.from(
+      switchNode.querySelectorAll(".catalog-switch__option"),
+    );
+    if (!options.length) return;
+
+    const setActive = (option) => {
+      options.forEach((item) => item.classList.remove("is-active"));
+      option.classList.add("is-active");
+      updateThumb(switchNode);
+    };
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        setActive(option);
+      });
+    });
+
+    updateThumb(switchNode);
+  });
+
+  window.addEventListener("resize", () => {
+    switches.forEach((switchNode) => updateThumb(switchNode));
+  });
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   setupCart();
   setupAnimationToggle();
+  setupCatalogSwitches();
 });
