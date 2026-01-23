@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'product/vars.css' %}">
+  <link rel="stylesheet" href="{% static 'product/style.css' %}">
+  <style>
+    html {
+      font-size: 0.52vw;
+    }
+
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      background: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    menu, ol, ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <title>{{ product.title }} | Chained Project</title>
+  <link rel="stylesheet" href="{% static 'ui/ui.css' %}">
+  <script defer src="{% static 'ui/ui.js' %}"></script>
+</head>
+<body class="ui-body" data-page="product">
+  <div class="product-card">
+    <header class="product-card__header">
+      <img class="product-card__logo" src="{% static 'catalog/vector0.svg' %}" alt="Chained Project" />
+      <nav class="product-card__nav">
+        <a class="ui-link ui-nav-link" href="{% url 'home' %}">Главная</a>
+        <a class="ui-link ui-nav-link" href="{% url 'catalog' %}">Коллекции</a>
+        <a class="ui-link ui-nav-link" href="{% url 'socseti' %}">Соц. сети</a>
+        <a class="ui-link ui-nav-link" href="{% url 'catalog' %}">Все товары</a>
+      </nav>
+      <div class="product-card__cart">
+        BAG
+        <span>(</span>
+        <span class="product-card__cart-count js-cart-count">0</span>
+        <span>)</span>
+      </div>
+    </header>
+
+    <div class="product-card__layout">
+      <div class="product-card__thumbs">
+        <div class="product-card__thumb"></div>
+        <div class="product-card__thumb"></div>
+        <div class="product-card__thumb"></div>
+        <div class="product-card__thumb"></div>
+        <div class="product-card__thumb product-card__thumb--short"></div>
+      </div>
+
+      <div>
+        <div class="product-card__hero"></div>
+        <div class="product-card__hero-bottom"></div>
+      </div>
+
+      <div class="product-card__info">
+        <h1 class="product-card__title">{{ product.title }}</h1>
+
+        <div class="product-card__label">Размер*</div>
+        <div class="product-card__sizes">
+          <button class="product-card__size-btn" type="button">S</button>
+          <button class="product-card__size-btn is-active" type="button">M</button>
+          <button class="product-card__size-btn" type="button">L</button>
+          <button class="product-card__size-btn" type="button">XL</button>
+        </div>
+
+        <button
+          class="product-card__cta"
+          type="button"
+          data-id="{{ product.id }}"
+          data-product="{{ product.title }}"
+          data-price="{{ product.price }}"
+        >
+          В корзину
+        </button>
+
+        <details class="product-card__details" open>
+          <summary>
+            <span>Описание</span>
+            <span class="product-card__details-icon"></span>
+          </summary>
+          <ul class="product-card__details-content">
+            {% for item in product.description %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </details>
+
+        <details class="product-card__details">
+          <summary>
+            <span>Размер и посадка</span>
+            <span class="product-card__details-icon"></span>
+          </summary>
+          <ul class="product-card__details-content">
+            {% for item in product.fit %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-floating-panel">
+    <button class="ui-button ui-toggle js-animations-toggle" type="button" aria-pressed="false">
+      <span>Анимации</span>
+      <span class="ui-toggle__switch"></span>
+    </button>
+    <a class="ui-button ui-link" href="{% url 'catalog' %}">Каталог</a>
+    <a class="ui-button ui-link" href="{% url 'socseti' %}">Соц. сети</a>
+  </div>
+  <button class="ui-cart-button js-cart-toggle" type="button">
+    Корзина
+    <span class="ui-cart-count js-cart-count">0</span>
+  </button>
+  <aside class="ui-cart-drawer" aria-label="Корзина">
+    <div class="ui-cart-header">
+      <h2>Корзина</h2>
+      <button class="ui-button js-cart-toggle" type="button">Закрыть</button>
+    </div>
+    <div class="ui-cart-items js-cart-items"></div>
+    <div class="ui-cart-footer">
+      <div class="ui-cart-total">Итого: <span class="js-cart-total">0</span> ₽</div>
+      <a class="ui-button ui-checkout-button" href="{% url 'oforms' %}">Оформить заказ</a>
+    </div>
+  </aside>
+</body>
+</html>
