@@ -91,3 +91,7 @@ def product(request, slug):
         product = products.get(slug, products["hoodie-logo-chained"])
         product["id"] = slug
     return render(request, "pages/product.html", {"product": product})
+
+
+def admin_panel(request):
+    return render(request, "pages/admin.html")
