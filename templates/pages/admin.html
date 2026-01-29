@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель — товары</title>
+  <link rel="stylesheet" href="{% static 'admin/admin.css' %}">
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <div class="admin-header__brand">CHAINED PROJECT</div>
+    <nav class="admin-header__nav">
+      <a href="{% url 'home' %}">Главная</a>
+      <a href="{% url 'catalog' %}">Каталог</a>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-intro">
+      <h1>Админ-панель загрузки товаров</h1>
+      <p>Заполните карточку товара: фото, цена, скидка, описание и дополнительные детали.</p>
+    </section>
+
+    <form class="admin-form" action="#" method="post" enctype="multipart/form-data">
+      <div class="admin-form__grid">
+        <div class="admin-field">
+          <label for="product-name">Название товара</label>
+          <input id="product-name" name="product-name" type="text" placeholder="Например, Hoodie Chained Black" required>
+        </div>
+        <div class="admin-field">
+          <label for="product-sku">Артикул / SKU</label>
+          <input id="product-sku" name="product-sku" type="text" placeholder="CP-2025-001">
+        </div>
+        <div class="admin-field">
+          <label for="product-price">Цена, ₽</label>
+          <input id="product-price" name="product-price" type="number" min="0" step="1" placeholder="6500" required>
+        </div>
+        <div class="admin-field">
+          <label for="product-discount">Скидка, % (если есть)</label>
+          <input id="product-discount" name="product-discount" type="number" min="0" max="99" step="1" placeholder="10">
+        </div>
+        <div class="admin-field admin-field--wide">
+          <label for="product-description">Описание товара</label>
+          <textarea id="product-description" name="product-description" rows="4" placeholder="Состав, особенности, материал, посадка."></textarea>
+        </div>
+        <div class="admin-field admin-field--wide">
+          <label for="product-details">Дополнительные характеристики</label>
+          <textarea id="product-details" name="product-details" rows="3" placeholder="Размерная сетка, уход, производство."></textarea>
+        </div>
+      </div>
+
+      <section class="admin-media">
+        <div class="admin-media__text">
+          <h2>Фото товара</h2>
+          <p>Загрузите до 6 фотографий в хорошем качестве.</p>
+        </div>
+        <div class="admin-media__controls">
+          <input id="product-images" name="product-images" type="file" accept="image/*" multiple>
+          <label class="admin-media__button" for="product-images">Выбрать файлы</label>
+        </div>
+        <div class="admin-media__preview" id="image-preview">
+          <div class="admin-media__placeholder">
+            Добавьте изображения — появится превью.
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-pricing">
+        <h2>Блок цен</h2>
+        <div class="admin-pricing__card">
+          <div class="admin-pricing__price">
+            <span>Текущая цена</span>
+            <strong id="price-output">0 ₽</strong>
+          </div>
+          <div class="admin-pricing__price admin-pricing__price--discount">
+            <span>Цена со скидкой</span>
+            <strong id="discount-output">—</strong>
+          </div>
+          <div class="admin-pricing__note">
+            Стоимость со скидкой рассчитывается автоматически при заполнении цены и скидки.
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-actions">
+        <button class="admin-button admin-button--primary" type="submit">Сохранить товар</button>
+        <button class="admin-button" type="reset">Очистить форму</button>
+      </section>
+    </form>
+  </main>
+
+  <script>
+    const priceInput = document.getElementById('product-price');
+    const discountInput = document.getElementById('product-discount');
+    const priceOutput = document.getElementById('price-output');
+    const discountOutput = document.getElementById('discount-output');
+    const preview = document.getElementById('image-preview');
+    const imageInput = document.getElementById('product-images');
+
+    function formatPrice(value) {
+      if (!value) return '0 ₽';
+      return `${Number(value).toLocaleString('ru-RU')} ₽`;
+    }
+
+    function updatePricing() {
+      const price = Number(priceInput.value);
+      const discount = Number(discountInput.value);
+      priceOutput.textContent = formatPrice(price);
+
+      if (price > 0 && discount > 0) {
+        const discounted = Math.round(price - (price * discount) / 100);
+        discountOutput.textContent = formatPrice(discounted);
+      } else {
+        discountOutput.textContent = '—';
+      }
+    }
+
+    function renderPreview(files) {
+      preview.innerHTML = '';
+      if (!files.length) {
+        preview.innerHTML = '<div class="admin-media__placeholder">Добавьте изображения — появится превью.</div>';
+        return;
+      }
+      Array.from(files).slice(0, 6).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const card = document.createElement('div');
+          card.className = 'admin-media__item';
+          card.innerHTML = `<img src="${event.target.result}" alt="Фото товара">`;
+          preview.appendChild(card);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    priceInput.addEventListener('input', updatePricing);
+    discountInput.addEventListener('input', updatePricing);
+    imageInput.addEventListener('change', (event) => renderPreview(event.target.files));
+  </script>
+</body>
+</html>
