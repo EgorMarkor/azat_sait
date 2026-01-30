@@ -95,3 +95,23 @@ def product(request, slug):
 
 def admin_panel(request):
     return render(request, "pages/admin.html")
+
+
+def privacy_policy(request):
+    return render(request, "pages/privacy.html")
+
+
+def public_offer(request):
+    return render(request, "pages/public_offer.html")
+
+
+def personal_data(request):
+    return render(request, "pages/personal_data.html")
+
+
+def user_agreement(request):
+    return render(request, "pages/user_agreement.html")
+
+
+def contacts(request):
+    return render(request, "pages/contacts.html")
