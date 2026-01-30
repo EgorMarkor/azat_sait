@@ -322,6 +322,23 @@
   left: 13.5rem;
   top: 32.3rem;
 }
+.frame-2131330366__input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Manrope-Regular", sans-serif;
+  font-size: 2.1rem;
+  line-height: 1.643rem;
+  font-weight: 400;
+  position: absolute;
+  padding: 0;
+  outline: none;
+  z-index: 1;
+}
+.frame-2131330366__input::placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+}
 .frame-2131330366__rectangle-309 {
   background: #000000;
   border-radius: 25.7rem;
@@ -364,29 +381,23 @@
   left: 88rem;
   top: 32.2rem;
 }
-.frame-2131330366__div15 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  font-weight: 400;
-  opacity: 0.2;
-  position: absolute;
+.frame-2131330366__input--surname {
   left: 16.8rem;
   top: 38.2rem;
+  width: 37.5rem;
+  height: 2.4rem;
 }
-.frame-2131330366__div16 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  font-weight: 400;
-  opacity: 0.2;
-  position: absolute;
+.frame-2131330366__input--name {
   left: 60rem;
   top: 38.2rem;
+  width: 25.5rem;
+  height: 2.4rem;
+}
+.frame-2131330366__input--patronymic {
+  left: 91.3rem;
+  top: 38.2rem;
+  width: 24rem;
+  height: 2.4rem;
 }
 .frame-2131330366__rectangle-311 {
   background: #000000;
@@ -409,17 +420,11 @@
   left: 13.5rem;
   top: 45.1rem;
 }
-.frame-2131330366__div17 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  font-weight: 400;
-  opacity: 0.2;
-  position: absolute;
+.frame-2131330366__input--email {
   left: 16.8rem;
   top: 51rem;
+  width: 37.5rem;
+  height: 2.4rem;
 }
 .frame-2131330366__rectangle-312 {
   background: #000000;
@@ -466,16 +471,11 @@
   left: 59.7rem;
   top: 51rem;
 }
-.frame-2131330366___960-000-00-00 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  font-weight: 400;
-  position: absolute;
+.frame-2131330366__input--phone {
   left: 68.4rem;
   top: 51rem;
+  width: 48.5rem;
+  height: 2.4rem;
 }
 .frame-2131330366__div19 {
   width: 0.985rem;
@@ -545,32 +545,23 @@
   left: 56.5rem;
   top: 63.4rem;
 }
-.frame-2131330366__div21 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  letter-spacing: -0.03em;
-  font-weight: 400;
-  opacity: 0.5;
-  position: absolute;
+.frame-2131330366__input--telegram {
   left: 16.8rem;
   top: 69.4rem;
+  width: 37.5rem;
+  height: 2.4rem;
 }
-.frame-2131330366__div22 {
-  color: #161616;
-  text-align: left;
-  font-family: "Manrope-Medium", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.643rem;
-  letter-spacing: -0.03em;
-  font-weight: 500;
-  position: absolute;
+.frame-2131330366__input--telegram::placeholder {
+  opacity: 0.5;
+}
+.frame-2131330366__input--comment {
   left: 60rem;
   top: 69.4rem;
-  width: 15.1rem;
-  height: 1.7rem;
+  width: 56.5rem;
+  height: 2.4rem;
+}
+.frame-2131330366__input--comment::placeholder {
+  opacity: 0.4;
 }
 .frame-2131330366__group-1129 {
   position: absolute;
