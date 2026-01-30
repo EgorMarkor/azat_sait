@@ -191,3 +191,70 @@
   left: 6.1rem;
   top: 15.5rem;
 }
+
+@media (max-width: 900px) {
+  .frame-2131331156 {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 8rem;
+    background: #000000;
+    overflow-x: hidden;
+  }
+
+  .frame-2131331156__rectangle-119 {
+    display: none;
+  }
+
+  .frame-2131331156__rectangle-104 {
+    width: 100%;
+  }
+
+  .frame-2131331156__vector {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .frame-2131331156__div {
+    left: 3rem;
+    font-size: 3rem;
+  }
+
+  .frame-2131331156__rectangle-101 {
+    left: auto;
+    right: 3rem;
+  }
+
+  .frame-2131331156__bag {
+    left: auto;
+    right: 9.2rem;
+  }
+
+  .frame-2131331156___3 {
+    left: auto;
+    right: 4.6rem;
+  }
+
+  .frame-2131331156__div2 {
+    left: auto;
+    right: 6.2rem;
+  }
+
+  .frame-2131331156__div3 {
+    left: auto;
+    right: 3.2rem;
+  }
+
+  .frame-2131331156__insales-ru-1-2-a-b-3-4-5-6-7-8-9-1-2-3-10-11-12-a-b-c-d-e-f-g-h-i-j-k-13-chainedproject-14-chainedproject-15-16-17-18-19-20-support-chainedproject-ru {
+    left: 3rem;
+    top: 14rem;
+    width: calc(100% - 6rem);
+    font-size: 3rem;
+    line-height: 4.4rem;
+  }
+
+  .frame-2131331156__div4,
+  .frame-2131331156__div5,
+  .frame-2131331156__div6 {
+    display: none;
+  }
+}
